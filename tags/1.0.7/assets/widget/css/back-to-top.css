@@ -1,0 +1,44 @@
+/* =======================================
+  Back To Top
+======================================= */
+
+.wkit-back-to-top-wrap {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 9999;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.wkit-back-to-top-wrap.is-auto-hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.wkit-back-to-top-wrap.is-auto-hide.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wkit-back-to-top-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border: none;
+  background: #1f2937;
+  text-decoration: none;
+}
+
+.wkit-back-to-top-btn i {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1;
+}
+

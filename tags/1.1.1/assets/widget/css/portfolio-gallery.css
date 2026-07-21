@@ -1,0 +1,139 @@
+/* =======================================
+  Portfolio Gallery
+======================================= */
+
+.wkit-portfolio-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.wkit-portfolio-gallery-wrap {
+  width: 100%;
+}
+
+.wkit-portfolio-tabs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.wkit-portfolio-tab {
+  border: 1px solid #d7d7d7;
+  background: #ffffff;
+  color: #1d1d1f;
+  border-radius: 999px;
+  padding: 8px 16px;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.wkit-portfolio-tab:hover,
+.wkit-portfolio-tab.is-active {
+  background: #1d1d1f;
+  border-color: #1d1d1f;
+  color: #ffffff;
+}
+
+.wkit-portfolio-item {
+  position: relative;
+  overflow: hidden;
+  min-height: 320px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+}
+
+.wkit-portfolio-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.7) 100%);
+  transition: all 0.3s ease-in-out;
+}
+
+.wkit-portfolio-content {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 22px;
+  z-index: 2;
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+.wkit-portfolio-title {
+  color: inherit;
+  margin: 0 0 8px;
+}
+
+.wkit-portfolio-description {
+  color: inherit;
+  margin: 0;
+}
+
+.wkit-portfolio-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.wkit-portfolio-action-wrap {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 14px;
+}
+
+.wkit-portfolio-action.is-icon-only {
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.wkit-portfolio-action-icon {
+  display: inline-flex;
+}
+
+.wkit-portfolio-action-icon svg,
+.wkit-portfolio-action-icon i {
+  width: 16px;
+  height: 16px;
+  color: inherit;
+  fill: currentColor;
+}
+
+.wkit-portfolio-gallery.is-overlay .wkit-portfolio-content {
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.wkit-portfolio-gallery.is-overlay .wkit-portfolio-item:hover .wkit-portfolio-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.wkit-portfolio-gallery.is-overlay .wkit-portfolio-item:hover .wkit-portfolio-overlay {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.22) 0%, rgba(0, 0, 0, 0.82) 100%);
+}
+
+.wkit-portfolio-item.is-hidden {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .wkit-portfolio-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .wkit-portfolio-gallery {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

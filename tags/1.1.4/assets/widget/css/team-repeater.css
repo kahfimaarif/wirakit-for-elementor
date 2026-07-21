@@ -1,0 +1,32 @@
+/* =======================================
+  Team Repeater
+======================================= */
+
+.wkit-team-repeater {
+  display: grid;
+  gap: 20px;
+}
+
+.wkit-team-repeater.wkit-carousel {
+  display: block;
+}
+
+.wkit-team-repeater .wkit-team-wrapper {
+  overflow: hidden;
+  min-height: 320px;
+}
+
+.wkit-team-repeater .team-social-profiles {
+  gap: 10px;
+}
+
+.wkit-team-repeater .team-social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 30%;
+  background-color: #0d6efd;
+}
+
+.wkit-team-repeater .team-social-link svg {
+  fill: #ffffff;
+}

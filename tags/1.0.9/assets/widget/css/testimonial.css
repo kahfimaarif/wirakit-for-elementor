@@ -1,0 +1,25 @@
+/* =======================================
+  4. Testimonial
+======================================= */
+
+.wkit-testimonial {
+  display: grid;
+  gap: 20px;
+}
+
+.wkit-testimonial-item-wrapper{
+  overflow: hidden;
+}
+
+.wkit-testimonial-item {
+  height: 100%;
+}
+
+.wkit-testimonial-client-info-wrapper {
+  align-items: center;
+}
+
+.wkit-testimonial-item img.client-image {
+  width: 70px;
+  height: 70px;
+}

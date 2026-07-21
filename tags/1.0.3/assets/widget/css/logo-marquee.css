@@ -1,0 +1,54 @@
+/* =======================================
+  Logo Marquee
+======================================= */
+
+.wkit-logo-marquee {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: block;
+}
+
+.wkit-logo-marquee-track {
+  display: inline-flex;
+  align-items: center;
+  gap: 30px;
+  width: max-content;
+  white-space: nowrap;
+  animation-name: wiraElementorKitLogoMarquee;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+.wkit-logo-marquee.direction-right .wkit-logo-marquee-track {
+  animation-direction: reverse;
+}
+
+.wkit-logo-marquee.pause-on-hover:hover .wkit-logo-marquee-track {
+  animation-play-state: paused;
+}
+
+.wkit-logo-marquee-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wkit-logo-marquee-item img {
+  display: block;
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+}
+
+@keyframes wiraElementorKitLogoMarquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+

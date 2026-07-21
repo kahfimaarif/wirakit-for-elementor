@@ -1,0 +1,24 @@
+/* =======================================
+  11. Carousel & Swiper
+======================================= */
+
+.wkit-carousel .swiper-button-prev::after {
+  content: none !important;
+}
+
+.wkit-carousel .swiper-button-next::after {
+  content: none !important;
+}
+
+.wkit-carousel.swiper {
+  overflow-y: visible;
+  overflow-x: clip;
+}
+
+.wkit-carousel.swiper.wkit-marquee-vertical {
+  overflow: hidden;
+}
+
+.wkit-swiper-pagination .swiper-pagination-bullet {
+  opacity: 1;
+}

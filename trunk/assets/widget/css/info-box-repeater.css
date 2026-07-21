@@ -1,0 +1,46 @@
+/* =======================================
+  2. Info Box Repeater
+======================================= */
+
+.wkit-info-box-repeater {
+  display: grid;
+  gap: 20px;
+}
+
+.wkit-info-box-repeater-item {
+  height: 100%;
+  justify-content: space-between;
+}
+
+.wkit-info-box-repeater-content-wrapper {
+  width: 100%;
+}
+
+.wkit-info-box-repeater-item-wrapper {
+  height: 100%;
+  overflow: hidden;
+}
+
+.wkit-info-box-repeater-item-wrapper a.wkit-info-box-repeater-item-global-link {
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  transition: inherit;
+}
+
+.wkit-info-box-repeater-item-wrapper a.wkit-info-box-repeater-item-global-link:hover {
+  color: inherit;
+}
+
+.wkit-info-box-repeater-learnmore {
+  margin-top: 20px;
+}
+
+.info-box-repeater-title {
+  margin-bottom: 7px;
+}
+
+.info-box-repeater-excerpt {
+  margin-bottom: 0;
+}

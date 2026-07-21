@@ -1,0 +1,8 @@
+.wkit-single-loop {
+  display: grid;
+  gap: 20px;
+}
+
+.gallery-item{
+    overflow: hidden;
+}

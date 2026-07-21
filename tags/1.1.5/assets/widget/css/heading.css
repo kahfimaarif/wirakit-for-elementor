@@ -1,0 +1,18 @@
+/* =======================================
+  7. Heading & Text
+======================================= */
+
+.wkit-advanced-heading .wkit-animated-text.wkit-text-fill,
+.wkit-advanced-heading.wkit-text-fill .wkit-animated-text {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.wkit-dynamic-heading[class*=elementor-size-] > a {
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  transition: inherit;
+}

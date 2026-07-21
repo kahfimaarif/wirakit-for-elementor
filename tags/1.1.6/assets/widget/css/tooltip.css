@@ -1,0 +1,91 @@
+/* =======================================
+  Tooltip
+======================================= */
+
+.wkit-tooltip-wrapper {
+  display: block;
+  width: 100%;
+}
+
+.wkit-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.wkit-tooltip-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.wkit-tooltip-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wkit-tooltip-content {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px + var(--wkit-tooltip-y, 0px));
+  transform: translateX(calc(-50% + var(--wkit-tooltip-x, 0px)));
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 99;
+  min-width: 120px;
+  text-align: left;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.wkit-tooltip:hover .wkit-tooltip-content {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* =============================
+   TOOLTIP GLOW
+============================= */
+.tooltip-glow::before {
+  -webkit-animation-delay: .3s !important;
+  animation-delay: .3s !important;
+}
+
+.tooltip-glow::after {
+  -webkit-animation-delay: .9s !important;
+  animation-delay: .9s !important;
+}
+
+.tooltip-glow::before,
+.tooltip-glow::after,
+.tooltip-glow i::after {
+  content: " ";
+  position: absolute;
+  --glow-size: 15px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #1f2937;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 0 0 0 currentColor;
+  box-shadow: 0 0 0 0 currentColor;
+  -webkit-animation: glowPulse 3s infinite;
+  animation: glowPulse 3s infinite;
+  opacity: .6;
+  z-index: -1;
+}
+
+@keyframes glowPulse {
+  70% {
+    -webkit-box-shadow: 0 0 0 var(--glow-size, 15px) currentColor;
+    box-shadow: 0 0 0 var(--glow-size, 15px) currentColor;
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-box-shadow: 0 0 0 0 currentColor;
+    box-shadow: 0 0 0 0 currentColor;
+    opacity: 0;
+  }
+}

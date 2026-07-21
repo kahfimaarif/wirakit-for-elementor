@@ -1,0 +1,46 @@
+/* =======================================
+  Project
+======================================= */
+
+.wkit-project {
+  display: grid;
+  gap: 20px;
+}
+
+.wkit-project-item {
+  height: 100%;
+  justify-content: space-between;
+}
+
+.wkit-project-content-wrapper {
+  width: 100%;
+}
+
+.wkit-project-item-wrapper {
+  overflow: hidden;
+  height: 100%;
+}
+
+.wkit-project-item-wrapper a.wkit-project-item-global-link {
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  transition: inherit;
+}
+
+.wkit-project-item-wrapper a.wkit-project-item-global-link:hover {
+  color: inherit;
+}
+
+.wkit-learnmore {
+  margin-top: 20px;
+}
+
+.project-title {
+  margin-bottom: 7px;
+}
+
+.project-excerpt {
+  margin-bottom: 0;
+}

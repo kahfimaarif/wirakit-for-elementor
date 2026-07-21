@@ -1,0 +1,168 @@
+/* =======================================
+  8. Blog
+======================================= */
+
+.wkit-blog-post {
+  display: grid;
+  gap: 20px;
+}
+
+.wkit-blog-title a {
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  transition: inherit;
+}
+
+.wkit-blog-title a:hover {
+  color: inherit;
+}
+
+.wkit-post-meta-category a {
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  transition: inherit;
+}
+
+.wkit-post-item,
+.wkit-post-item-overlay {
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
+}
+
+.wkit-post-item:hover {
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+}
+
+.wkit-thumbnail-post-grid a img {
+  width: 100%;
+}
+
+.wkit-post-item:hover .wkit-thumbnail-post-grid {
+  overflow: hidden;
+}
+
+.wkit-post-item:hover .wkit-thumbnail-post-grid a img {
+  transform: scale(1.1) rotate(2deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.wkit-post-content {
+  width: -webkit-fill-available;
+}
+
+span.wkit-sticky-post {
+  position: absolute;
+  max-width: 200px;
+  width: 100%;
+  top: 35px;
+  right: -55px;
+  transform: rotatez(45deg);
+  z-index: 2;
+}
+
+.wkit-post-category {
+  position: absolute;
+  top: 25px;
+}
+
+.wkit-post-category ul.post-categories {
+  display: flex;
+  column-gap: 10px;
+}
+
+.wkit-post-category a {
+  display: block;
+  background-color: #1f2937;
+  color: #ffffff;
+  padding: 10px 25px;
+  border-radius: 6px;
+}
+
+.wkit-post-category a:hover {
+  color: #ffffff;
+}
+
+ul.wkit-pagination {
+  column-gap: 10px;
+  margin-top: 45px;
+  margin-bottom: 0;
+}
+
+ul.wkit-pagination li {
+  align-items: center;
+  justify-content: center;
+}
+
+ul.wkit-pagination li a {
+  color: #1f2937;
+  box-shadow: none;
+}
+
+ul.wkit-pagination li a:focus {
+  color: #1f2937;
+  box-shadow: none;
+}
+
+ul.wkit-pagination li.page-item span.page-link.dots {
+  color: #9aa3af;
+}
+
+ul.wkit-pagination li.page-item a.prev::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: '\f053';
+}
+
+ul.wkit-pagination li.page-item a.next::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: '\f054';
+}
+
+ul.wkit-pagination li.page-item a.page-link {
+  display: flex;
+  border-radius: 50%;
+  padding: 0;
+  border: none;
+  width: 45px;
+  height: 45px;
+  align-items: center;
+  justify-content: center;
+}
+
+ul.wkit-pagination li.page-item.active span.page-link.current {
+  display: flex;
+  border-radius: 50%;
+  padding: 0;
+  border: none;
+  width: 45px;
+  height: 45px;
+  align-items: center;
+  justify-content: center;
+  background-color: #0d6efd;
+}
+
+ul.wkit-pagination li.page-item span.page-link.dots {
+  display: flex;
+  border-radius: 50%;
+  padding: 0;
+  border: none;
+  width: 45px;
+  height: 45px;
+  align-items: center;
+  justify-content: center;
+}
+
+ul.wkit-pagination li.page-item a:not(.current).page-link {
+  background-color: #f3f4f6;
+}
+
+ul.wkit-pagination li.page-item a:not(.current).page-link:hover {
+  background-color: #1f2937;
+  color: #ffffff;
+}

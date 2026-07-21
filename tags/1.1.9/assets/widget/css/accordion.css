@@ -1,0 +1,98 @@
+/* =======================================
+  Accordion Widget
+======================================= */
+
+.wkit-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.wkit-accordion-item {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #ffffff;
+  transition: all 0.25s ease-in-out;
+}
+
+.wkit-accordion-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 18px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+
+.wkit-accordion-title {
+  margin: 0;
+  color: #111827;
+  font-weight: 600;
+  flex: 1 1 auto;
+  min-width: 0;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.wkit-accordion-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #111827;
+  line-height: 1;
+}
+
+.wkit-accordion-icon svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.wkit-accordion-icon-default,
+.wkit-accordion-icon-active {
+  display: inline-flex;
+}
+
+.wkit-accordion-icon-active {
+  display: none;
+}
+
+.wkit-accordion-item.is-active .wkit-accordion-icon-default {
+  display: none;
+}
+
+.wkit-accordion-item.is-active .wkit-accordion-icon-active {
+  display: inline-flex;
+}
+
+.wkit-accordion-body {
+  color: #374151;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.35s ease, opacity 0.25s ease;
+}
+
+.wkit-accordion-item.is-active .wkit-accordion-body {
+  opacity: 1;
+}
+
+.wkit-accordion-body-inner {
+  padding: 0 18px 18px;
+}
+
+.wkit-accordion-body > :first-child,
+.wkit-accordion-body-inner > :first-child {
+  margin-top: 0;
+}
+
+.wkit-accordion-body > :last-child,
+.wkit-accordion-body-inner > :last-child {
+  margin-bottom: 0;
+}

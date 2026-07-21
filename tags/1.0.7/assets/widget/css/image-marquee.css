@@ -1,0 +1,77 @@
+/* =======================================
+  Image Marquee
+======================================= */
+
+.wkit-image-marquee {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: block;
+}
+
+.wkit-image-marquee-track {
+  gap: 30px;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+.wkit-image-marquee.scroll-horizontal .wkit-image-marquee-track {
+  display: inline-flex;
+  align-items: center;
+  width: max-content;
+  white-space: nowrap;
+  animation-name: wiraElementorKitImageMarqueeHorizontal;
+}
+
+.wkit-image-marquee.scroll-vertical .wkit-image-marquee-track {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  animation-name: wiraElementorKitImageMarqueeVertical;
+}
+
+.wkit-image-marquee.scroll-vertical {
+  height: 320px;
+}
+
+.wkit-image-marquee.direction-reverse .wkit-image-marquee-track {
+  animation-direction: reverse;
+}
+
+.wkit-image-marquee.pause-on-hover:hover .wkit-image-marquee-track {
+  animation-play-state: paused;
+}
+
+.wkit-image-marquee-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wkit-image-marquee-item img {
+  display: block;
+  width: 220px;
+  height: 150px;
+  object-fit: cover;
+}
+
+@keyframes wiraElementorKitImageMarqueeHorizontal {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes wiraElementorKitImageMarqueeVertical {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, -50%, 0);
+  }
+}

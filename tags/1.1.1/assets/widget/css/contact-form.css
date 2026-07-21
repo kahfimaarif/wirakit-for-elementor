@@ -1,0 +1,108 @@
+.wkit-contact-form .form-row,
+.wkit-contact-form .cf7-custom-layout,
+.wkit-contact-form .wpcf7-form,
+.wkit-contact-form .wpcf7-form span{
+  display: flex;
+}
+
+@media (max-width: 768px) {
+    .wkit-contact-form .form-row{
+        flex-direction: column;
+    }
+}
+
+.wkit-contact-form .cf7-custom-layout,
+.wkit-contact-form .wpcf7-form{
+  flex-direction: column;
+}
+
+.wkit-contact-form .form-col,
+.wkit-contact-form .wpcf7-form label,
+.wkit-contact-form p,
+.wkit-contact-form span,
+.wkit-contact-form input,
+.wkit-contact-form textarea,
+.wkit-contact-form select,
+.wkit-contact-form .form-select-wrapper,
+.wkit-contact-form .form-date-wrapper{
+  width: 100%;
+  margin-bottom: 0px;
+}
+
+.wkit-contact-form .form-select-wrapper span::after,
+.wkit-contact-form .form-date-wrapper span::after{
+    font-family: "Font Awesome 6 Free";
+    font-size: 15px;
+    font-weight: 900;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.wkit-contact-form .form-select-wrapper span::after{
+    content: "\f078";
+}
+
+.wkit-contact-form select{
+  -webkit-appearance: none; /* hilangkan styling native agar lebih konsisten */
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0; /* sembunyikan icon bawaan */
+  cursor: pointer;
+}
+
+.wkit-contact-form .form-date-wrapper span::after {
+  content: "\f073";
+}
+
+.wkit-contact-form .form-date-wrapper span input[type="date"] {
+  padding-right: 30px; /* kasih space untuk icon */
+}
+
+.wkit-contact-form select:focus-visible{
+  outline: none;
+}
+
+.wkit-contact-form span.wpcf7-spinner{
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    width: 24px;
+}
+
+.wkit-contact-form .wpcf7-submit{
+  width: auto;
+  background-color: #0d6efd;
+  color: #ffffff;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: var( --theme-line-height-heading);
+}
+
+.wkit-contact-form .wpcf7-submit:hover{
+    background-color: #1f2937;
+}
+
+.wkit-contact-form .wpcf7-checkbox span,
+.wkit-contact-form .wpcf7-radio span,
+.wkit-contact-form .wpcf7-acceptance span,
+.wkit-contact-form .wpcf7-checkbox span label input,
+.wkit-contact-form .wpcf7-radio span label input,
+.wkit-contact-form .wpcf7-acceptance span label input{
+  width: auto;
+}
+
+.wkit-contact-form .wpcf7-list-item{
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+.wkit-contact-form .wpcf7-list-item label{
+    margin-bottom: 0px;
+}

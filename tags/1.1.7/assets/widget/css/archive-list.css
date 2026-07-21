@@ -1,0 +1,39 @@
+.wkit-archive-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.wkit-archive-title-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.wkit-archive-title-icon,
+.wkit-archive-item-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.wkit-archive-title-icon svg,
+.wkit-archive-item-icon svg {
+  width: 1em;
+  height: 1em;
+}
+
+.wkit-archive-items {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.wkit-archive-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}

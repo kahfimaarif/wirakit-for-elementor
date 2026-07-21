@@ -1,0 +1,44 @@
+/* =======================================
+  Tooltip
+======================================= */
+
+.wkit-tooltip-wrapper {
+  display: block;
+  width: 100%;
+}
+
+.wkit-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.wkit-tooltip-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.wkit-tooltip-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wkit-tooltip-content {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 8px + var(--wkit-tooltip-y, 0px));
+  transform: translateX(calc(-50% + var(--wkit-tooltip-x, 0px)));
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 99;
+  min-width: 120px;
+  text-align: left;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.wkit-tooltip:hover .wkit-tooltip-content {
+  opacity: 1;
+  visibility: visible;
+}

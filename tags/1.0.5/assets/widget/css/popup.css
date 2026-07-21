@@ -1,0 +1,197 @@
+/* =============================
+   WKIT POPUP BASE
+============================= */
+.wkit-popup-hide {
+  display: none;
+}
+
+.wkit-popup-modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.wkit-popup-modal.is-open {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.wkit-popup-modal.is-closing {
+  visibility: visible;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.wkit-popup-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.wkit-popup-modal.is-open .wkit-popup-overlay {
+  opacity: 1;
+}
+
+.wkit-popup-content {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  max-width: 100%;
+  max-height: 90vh;
+  overflow: visible;
+  opacity: 0;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.wkit-popup-content{
+  width: 900px;
+}
+
+.wkit-popup-modal.is-open .wkit-popup-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.wkit-popup-close {
+  position: absolute;
+  top: -40px;
+  right: 0px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border: none;
+  background: #9aa3af;
+  color: #4f46e5;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.wkit-popup-content iframe {
+  display: block;
+  width: 100%;
+  height: 60vh;
+  border: 0;
+}
+
+/* =============================
+   ANIMATIONS
+============================= */
+.wkit-popup-modal.wkit-fade .wkit-popup-content {
+  opacity: 0;
+}
+.wkit-popup-modal.is-open.wkit-fade .wkit-popup-content {
+  opacity: 1;
+}
+.wkit-popup-modal.is-closing.wkit-fade .wkit-popup-content {
+  opacity: 0;
+}
+
+.wkit-popup-modal.wkit-slide-down .wkit-popup-content {
+  transform: translateY(-100px);
+  opacity: 0;
+}
+.wkit-popup-modal.is-open.wkit-slide-down .wkit-popup-content {
+  transform: translateY(0);
+  opacity: 1;
+}
+.wkit-popup-modal.is-closing.wkit-slide-down .wkit-popup-content {
+  transform: translateY(-100px);
+  opacity: 0;
+}
+
+.wkit-popup-modal.wkit-slide-up .wkit-popup-content {
+  transform: translateY(100px);
+  opacity: 0;
+}
+.wkit-popup-modal.is-open.wkit-slide-up .wkit-popup-content {
+  transform: translateY(0);
+  opacity: 1;
+}
+.wkit-popup-modal.is-closing.wkit-slide-up .wkit-popup-content {
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+.wkit-popup-modal.wkit-slide-left .wkit-popup-content {
+  transform: translateX(-100px);
+  opacity: 0;
+}
+.wkit-popup-modal.is-open.wkit-slide-left .wkit-popup-content {
+  transform: translateX(0);
+  opacity: 1;
+}
+.wkit-popup-modal.is-closing.wkit-slide-left .wkit-popup-content {
+  transform: translateX(-100px);
+  opacity: 0;
+}
+
+.wkit-popup-modal.wkit-slide-right .wkit-popup-content {
+  transform: translateX(100px);
+  opacity: 0;
+}
+.wkit-popup-modal.is-open.wkit-slide-right .wkit-popup-content {
+  transform: translateX(0);
+  opacity: 1;
+}
+.wkit-popup-modal.is-closing.wkit-slide-right .wkit-popup-content {
+  transform: translateX(100px);
+  opacity: 0;
+}
+
+/* =============================
+   BUTTON GLOW
+============================= */
+.button-glow::before {
+  -webkit-animation-delay: .3s !important;
+  animation-delay: .3s !important;
+}
+
+.button-glow::after {
+  -webkit-animation-delay: .9s !important;
+  animation-delay: .9s !important;
+}
+
+.button-glow::before,
+.button-glow::after,
+.button-glow i::after {
+  content: " ";
+  position: absolute;
+  --glow-size: 15px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #1f2937;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 0 0 0 currentColor;
+  box-shadow: 0 0 0 0 currentColor;
+  -webkit-animation: glowPulse 3s infinite;
+  animation: glowPulse 3s infinite;
+  opacity: .6;
+  z-index: -1;
+}
+
+@keyframes glowPulse {
+  70% {
+    -webkit-box-shadow: 0 0 0 var(--glow-size, 15px) currentColor;
+    box-shadow: 0 0 0 var(--glow-size, 15px) currentColor;
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-box-shadow: 0 0 0 0 currentColor;
+    box-shadow: 0 0 0 0 currentColor;
+    opacity: 0;
+  }
+}

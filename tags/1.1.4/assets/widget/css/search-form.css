@@ -1,0 +1,33 @@
+.wkit-search-form {
+  width: 100%;
+}
+
+.wkit-search-form__form {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+}
+
+.wkit-search-form__input {
+  flex: 1 1 auto;
+  width: 100%;
+  outline: none;
+}
+
+.wkit-search-form__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.wkit-search-form__icon {
+  display: inline-flex;
+  line-height: 1;
+}
+
+.wkit-search-form__icon svg {
+  width: 1em;
+  height: 1em;
+}

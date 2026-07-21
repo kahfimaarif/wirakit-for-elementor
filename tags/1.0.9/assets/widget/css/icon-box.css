@@ -1,0 +1,40 @@
+/* =======================================
+  3. Icon Box
+======================================= */
+
+.wkit-icon-box {
+  display: grid;
+  gap: 20px;
+}
+
+.wkit-icon-box-item {
+  height: 100%;
+}
+
+.wkit-icon-box-content-wrapper {
+  width: 100%;
+}
+
+.wkit-icon-box-item-wrapper {
+  overflow: hidden;
+}
+
+.wkit-icon-box-item-wrapper a.wkit-icon-box-item-global-link {
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  transition: inherit;
+}
+
+.wkit-icon-box-item-wrapper a.wkit-icon-box-item-global-link:hover {
+  color: inherit;
+}
+
+.icon-box-title {
+  margin-bottom: 7px;
+}
+
+.icon-box-excerpt {
+  margin-bottom: 0;
+}

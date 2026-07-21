@@ -1,0 +1,57 @@
+/* =======================================
+  Text Marquee
+======================================= */
+
+.wkit-text-marquee {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: block;
+}
+
+.wkit-text-marquee-track {
+  display: inline-flex;
+  align-items: center;
+  gap: 36px;
+  width: max-content;
+  white-space: nowrap;
+  animation-name: wiraElementorKitMarquee;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+.wkit-text-marquee.direction-right .wkit-text-marquee-track {
+  animation-direction: reverse;
+}
+
+.wkit-text-marquee.pause-on-hover:hover .wkit-text-marquee-track {
+  animation-play-state: paused;
+}
+
+.wkit-text-marquee-item,
+.wkit-text-marquee-separator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.wkit-text-marquee-item {
+  color: #1f2937;
+}
+
+.wkit-text-marquee-separator {
+  color: #9aa3af;
+}
+
+@keyframes wiraElementorKitMarquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+

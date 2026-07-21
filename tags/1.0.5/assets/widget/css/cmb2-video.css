@@ -1,0 +1,45 @@
+/* =======================================
+  CMB2 Video
+======================================= */
+.wkit-cmb2-video {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 320px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.wkit-cmb2-video::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.wkit-cmb2-video__trigger {
+  position: relative;
+  z-index: 1;
+  width: 64px;
+  height: 64px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.9);
+  color: #111;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.wkit-cmb2-video__trigger:hover {
+  transform: scale(1.05);
+}
+
+.wkit-cmb2-video__icon i {
+  font-size: 18px;
+  line-height: 1;
+}
